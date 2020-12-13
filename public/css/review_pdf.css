@@ -1,0 +1,93 @@
+.page{
+    text-align:center;
+    height:100%;
+    page-break-after: always;
+    page-break-inside: avoid;
+}
+
+body {
+    font-family: "Noto Serif CJK JP";
+    font-weight: 500;
+}
+
+.page:last-child{
+    page-break-after: auto;
+}
+
+.h1 {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+}
+
+
+img {
+    width: 100%;
+}
+
+h2 {
+    font-size: 66px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+}
+
+table {
+    width: 100%;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-collapse: collapse;
+}
+
+.date {
+    text-align: left;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.stock_name, .trade_review_title{
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-bottom: 0;
+    font-size: 44px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+}
+
+p.daily_chart, p.day_chart{
+    text-align: right;
+    font-size: 24px;
+    margin: 10px;
+}
+
+.stock_reason_title, .trade_how_title {
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+}
+
+.stock_extension {
+    border: 2px solid black;
+    padding: 40px;
+    font-size: 30px;
+}
+
+.stock_review {
+    border: 2px solid black;
+    padding: 20px;
+    font-size: 26px;
+}
