@@ -13,7 +13,7 @@ class HomeController extends Controller
     public function index(Content $content)
     {
         return $content
-            ->title('Clelib管理画面')
+            ->title('StockDataBase管理画面')
             ->row(Dashboard::title())
             ->row(function (Row $row) {
 
