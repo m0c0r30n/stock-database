@@ -27,7 +27,7 @@
 </style>
 
 <div class="title">
-    Clelib-Management
+    Stock-Database-Management
 </div>
 <div class="links">
     <a href="{{ url()->current() }}/stockdatabase" target="_blank">株データベース管理のページへ</a>
