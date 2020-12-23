@@ -15,11 +15,8 @@ body {
 }
 
 .h1 {
-    font-size: 40px;
-    font-weight: bold;
+    font-size: 44px;
     text-align: center;
-    text-decoration: underline;
-    text-decoration-thickness: 3px;
 }
 
 
@@ -29,17 +26,14 @@ img {
 
 h2 {
     font-size: 66px;
-    font-weight: bold;
     text-align: center;
-    text-decoration: underline;
-    text-decoration-thickness: 3px;
 }
 
 table {
     width: 100%;
-    border-top: 2px solid black;
-    border-left: 2px solid black;
-    border-right: 2px solid black;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
     border-collapse: collapse;
 }
 
@@ -57,10 +51,7 @@ table {
     margin-bottom: 20px;
     padding-bottom: 0;
     font-size: 44px;
-    font-weight: bold;
     text-align: center;
-    text-decoration: underline;
-    text-decoration-thickness: 3px;
 }
 
 p.daily_chart, p.day_chart{
@@ -74,10 +65,7 @@ p.daily_chart, p.day_chart{
     margin-top: 0;
     margin-bottom: 0;
     font-size: 50px;
-    font-weight: bold;
     text-align: center;
-    text-decoration: underline;
-    text-decoration-thickness: 3px;
 }
 
 .stock_extension {
