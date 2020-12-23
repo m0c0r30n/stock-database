@@ -15,8 +15,10 @@ body {
 }
 
 .h1 {
-    font-size: 44px;
+    font-size: 40px;
     text-align: center;
+    text-decoration: underline;
+    text-decoration-thickness: 6px;
 }
 
 
@@ -27,6 +29,8 @@ img {
 h2 {
     font-size: 66px;
     text-align: center;
+    text-decoration: underline;
+    text-decoration-thickness: 6px;
 }
 
 table {
@@ -52,6 +56,8 @@ table {
     padding-bottom: 0;
     font-size: 44px;
     text-align: center;
+    text-decoration: underline;
+    text-decoration-thickness: 6px;
 }
 
 p.daily_chart, p.day_chart{
@@ -66,6 +72,8 @@ p.daily_chart, p.day_chart{
     margin-bottom: 0;
     font-size: 50px;
     text-align: center;
+    text-decoration: underline;
+    text-decoration-thickness: 6px;
 }
 
 .stock_extension {
