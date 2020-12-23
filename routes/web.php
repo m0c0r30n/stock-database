@@ -14,4 +14,4 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/', 'CircleController@index');
+Route::get('/', 'StockDatabaseController@index');

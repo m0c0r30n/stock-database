@@ -8,7 +8,11 @@
   </head>
 <body>
 <main class="wrapper">
-  <h1>管理者ページに移って</h1>
+  <div class="sikiho_list_content">
+    @for ($i = 0; $i < 12; $i++)
+    <h1>{{ $sikiho_datas[$i]['sikiho_title'] }}</h1>
+    @endfor
+  </div>
 </main>
 </body>
 </html>

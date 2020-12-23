@@ -5,6 +5,7 @@ namespace App\Admin\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use App\Jobs\MakeTopPdf;
+use App\Jobs\MakeReviewPdf;
 
 use App\Reviewnote;
 use App\Stockchange;
@@ -26,17 +27,24 @@ class MakePdfController extends Controller
                 break;
             }
         }
-
         if (isset($null_num)) {
-            $pdf = \PDF::loadView('makepdf.reviewnote', ['pages' => range(1, 6)], ['id' => $id, 'review_note' => $review_note, 'stock_change' => $stock_change, 'week_day' => $week[$week_day], 'week_day2' => $week[$week_day+1], 'null_num' => $null_num])
-            ->setOption('encoding', 'utf-8')
-            ->setOption('user-style-sheet', base_path() . '/public/css/review_pdf.css');
+            $this->dispatch(new MakeReviewPdf($id, $review_note, $stock_change, $week[$week_day], $week[$week_day+1], $null_num));
         } else {
-            $pdf = \PDF::loadView('makepdf.reviewnote', ['pages' => range(1, 6)], ['id' => $id, 'review_note' => $review_note, 'stock_change' => $stock_change, 'week_day' => $week[$week_day], 'week_day2' => $week[$week_day+1]])
-            ->setOption('encoding', 'utf-8')
-            ->setOption('user-style-sheet', base_path() . '/public/css/review_pdf.css');
+            $this->dispatch(new MakeReviewPdf($id, $review_note, $stock_change, $week[$week_day], $week[$week_day+1]));
         }
-        return $pdf->inline($review_note->date->format('Y_m_d').'_review_note.pdf');
+        $created_at = $review_note['created_at']->format('Y_m_d');
+        return view('makepdf.reviewpdf_download', ['created_at' => $created_at]);
+        
+
+        // if (isset($null_num)) {
+        //     $pdf = \PDF::loadView('makepdf.reviewnote', ['pages' => range(1, 6)], ['id' => $id, 'review_note' => $review_note, 'stock_change' => $stock_change, 'week_day' => $week[$week_day], 'week_day2' => $week[$week_day+1], 'null_num' => $null_num])
+        //     ->setOption('encoding', 'utf-8')
+        //     ->setOption('user-style-sheet', base_path() . '/public/css/review_pdf.css');
+        // } else {
+        //     $pdf = \PDF::loadView('makepdf.reviewnote', ['pages' => range(1, 6)], ['id' => $id, 'review_note' => $review_note, 'stock_change' => $stock_change, 'week_day' => $week[$week_day], 'week_day2' => $week[$week_day+1]])
+        //     ->setOption('encoding', 'utf-8')
+        //     ->setOption('user-style-sheet', base_path() . '/public/css/review_pdf.css');
+        // }
         // return view('makepdf.index', ['id' => $id, 'review_note' => $review_note, 'stock_chage' => $stock_change]);
     }
 
