@@ -32,6 +32,5 @@
 <div class="links">
     <a href="{{ url()->current() }}/stockdatabase" target="_blank">株データベース管理のページへ</a>
     <a href="{{ url()->current() }}/lionnote" target="_blank">らいおんまるノート管理のページへ</a>
-    <a href="{{ url()->current() }}/review" target="_blank">振り返りNote管理のページへ</a>
     <a href="{{ url()->current() }}/attention" target="_blank">注目Note管理のページへ</a>
 </div>
