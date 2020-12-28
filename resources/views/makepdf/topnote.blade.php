@@ -7,7 +7,7 @@
   </head>
 <body>
   <div class="page">
-    <img class="cover" src="https://circle-thumbnail.s3.ap-northeast-1.amazonaws.com/{{ $top_fifteen->cover }}">
+    <img class="cover" src="https://stock-database.s3.ap-northeast-1.amazonaws.com/{{ $top_fifteen->cover }}">
   </div>
   <div class="page">
     <h1 id="pickup_stock_title">注目銘柄TOP15</h2>
@@ -25,7 +25,7 @@
       <span class="dekidaka">出来高→{{ $stock_info[$n]->dekidaka }}</span>
       <span class="overunder">O/U→{{ $stock_info[$n]->overunder }}</spanx>
     </h2>
-    <img src="https://circle-thumbnail.s3.ap-northeast-1.amazonaws.com/{{ $stock_info[$n]->chart_picture }}">
+    <img src="https://stock-database.s3.ap-northeast-1.amazonaws.com/{{ $stock_info[$n]->chart_picture }}">
     <p class="stock_description">{!! nl2br(e($stock_info[$n]->description)) !!}</p>
   </div>
   @endfor
