@@ -9,7 +9,7 @@ use App\Stockinfo;
 
 class Stockinfo extends Model
 {
-    protected $fillable=['title','topfifteen_id','dekidaka','overunder','chartpicture','description'];
+    protected $fillable=['topfifteen_id','dekidaka','overunder','chart_picture','description'];
 
     public function topfif() {
         return $this->belongTo(Topfifteen::class,'topfifteen_id');
