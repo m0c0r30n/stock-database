@@ -3,7 +3,6 @@ import requests
 import MySQLdb
 import re
 from bs4 import BeautifulSoup
-from requests_html import HTMLSession
 from selenium.webdriver.support.select import Select
 from selenium import webdriver
 from time import sleep
