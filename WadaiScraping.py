@@ -14,7 +14,7 @@ class WadaiScraping():
         self.wadaiurl = "https://kabutan.jp/news/marketnews/?category=9"
 
         options = webdriver.ChromeOptions()
-        # options.add_argument('--headless')
+        options.add_argument('--headless')
         self.driver = webdriver.Chrome(options=options)
 
     def main(self):
@@ -49,6 +49,7 @@ class WadaiScraping():
 
                 r = requests.get(detail_url)
                 soup = BeautifulSoup(r.content, 'lxml')
+                soup = soup.encode("utf-8")
                 stock_datetime = soup.select_one("time.s_news_date")["datetime"]
                 
                 stock_date = stock_datetime.split("T")[0]
