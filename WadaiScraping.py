@@ -51,7 +51,6 @@ class WadaiScraping():
 
                 r = requests.get(detail_url)
                 soup = BeautifulSoup(r.content, 'lxml')
-                soup = soup.encode("utf-8")
                 stock_datetime = soup.select_one("time.s_news_date")["datetime"]
                 
                 stock_date = stock_datetime.split("T")[0]
