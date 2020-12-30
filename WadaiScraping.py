@@ -23,7 +23,9 @@ class WadaiScraping():
             port=3306,
             user='root',
             password='',
-            database='stock_databases'
+            database='stock_databases',
+            use_unicode=True,
+            charset="utf8"
         )
         
         cur = conn.cursor()
