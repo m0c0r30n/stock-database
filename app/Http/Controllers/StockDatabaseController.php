@@ -10,6 +10,8 @@ use Illuminate\Support\Facades\DB;
 
 
 use App\Sikihodata;
+use App\Stockinfo;
+use App\WadaiData;
 
 class StockDatabaseController extends Controller
 {
@@ -27,6 +29,11 @@ class StockDatabaseController extends Controller
 
     public function index() {
         $sikiho_datas = Sikihodata::inRandomOrder()->get();
+        $stock_infos = Stockinfo::inRandomOrder()->get();
+        $wadai_data = WadaiData::inRandomOrder()->get();
+
+        var_dump($wadai_data);exit();
+
         return view('stockdatabase.index', ["sikiho_datas" => $sikiho_datas]);
     }
 

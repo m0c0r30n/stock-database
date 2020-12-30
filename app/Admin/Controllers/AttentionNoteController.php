@@ -4,6 +4,7 @@ namespace App\Admin\Controllers;
 
 use App\Lionnote;
 use App\Topfifteen;
+use App\Extrastock;
 use App\Admin\Actions\Post\TopReplicate;
 use App\Http\Controllers\Controller;
 use Encore\Admin\Controllers\HasResourceActions;
@@ -199,6 +200,12 @@ class AttentionNoteController extends Controller
                 $nestedForm->text('overunder', 'Over/Under比');
                 $nestedForm->image('chart_picture','日足チャート');
                 $nestedForm->textarea('description','説明');
+            });
+        })->tab('EXTRA銘柄', function($form) {
+            $form->hasMany('extras','追加銘柄',function(Form\NestedForm $nestedForm) {
+                $nestedForm->hidden('id');
+                $nestedForm->number('stock_number', '銘柄コード');
+                $nestedForm->text('stock_name', '銘柄名');
             });
         });
 
