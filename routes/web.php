@@ -15,3 +15,6 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/', 'StockDatabaseController@index');
+Route::get('/lionnote', 'StockDatabaseController@lionnote');
+Route::get('/stockdata/{stock_number}', 'StockDatabaseController@detail');
+
