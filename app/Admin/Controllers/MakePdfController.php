@@ -52,6 +52,7 @@ class MakePdfController extends Controller
     {
         $top_fifteen = Topfifteen::find($id);
         $stock_info = Stockinfo::where('topfifteen_id', '=', $id)->orderBy('stock_ranking', 'desc')->get();
+        var_dump($stock_info);exit();
         $this->dispatch(new MakeTopPdf($id, $top_fifteen, $stock_info, "hogehoge"));
         $created_at = $top_fifteen['created_at']->format('Y_m_d');
         return view('makepdf.pdf_download', ['created_at' => $created_at]);

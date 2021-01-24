@@ -15,6 +15,7 @@ use App\Stockinfo;
 use App\Stockchange;
 use App\Topfifteen;
 use App\WadaiData;
+use App\Lionnote;
 
 class StockDatabaseController extends Controller
 {
@@ -59,10 +60,12 @@ class StockDatabaseController extends Controller
             $id = $v->id;
             array_push($stock_database_id, $id);
         }
+        
         $sikiho_datas = Sikihodata::latest()->where('stockdatabase_id', $stock_database_id[0])->get();
         
-        $wadai_datas = WadaiData::where('stock_number', $stock_number)->get();
-       
+        $wadai_datas = WadaiData::where('stock_number', $stock_number)->orderBy('date', 'desc')->withCasts(['date' => 'date'])->get();
+        $lion_notes = Lionnote::where('stock_number', $stock_number)->orderBy('date', 'desc')->withCasts(['date' => 'date'])->get();
+        // var_dump($wadai_datas);exit();
         return view('stockdatabase.detail', ["stock_database" => $stock_database, "sikiho_datas" => $sikiho_datas, "wadai_datas" => $wadai_datas]);
     }
 
