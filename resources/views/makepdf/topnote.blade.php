@@ -14,7 +14,7 @@
     <ul>
       <?php $stock_count = count($stock_info); ?>
       @for ($i = $stock_count-1; $i >= 0; $i--)
-      <li>{{ $stock_count-$i }}. {{ $stock_info[$i]->stock_name }} ({{ $stock_info[$i]->stock_number }})</li>
+      <li>{{ $stock_count-11 }}. {{ $stock_info[$i]->stock_name }} ({{ $stock_info[$i]->stock_number }})</li>
       @endfor
     </ul>
   </div>
