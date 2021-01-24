@@ -13,8 +13,8 @@
     <h1 id="pickup_stock_title">注目銘柄TOP15</h2>
     <ul>
       <?php $stock_count = count($stock_info); ?>
-      @for ($i = 0; $i < $stock_count; $i++)
-      <li>{{ $i+1 }}. {{ $stock_info[$i]->stock_name }} ({{ $stock_info[$i]->stock_number }})</li>
+      @for ($i = $stock_count-1; $i >= 0; $i--)
+      <li>{{ $stock_count-$i }}. {{ $stock_info[$i]->stock_name }} ({{ $stock_info[$i]->stock_number }})</li>
       @endfor
     </ul>
   </div>
