@@ -66,7 +66,6 @@ class ColumnScraping():
                 for stock_number in stock_number_list:
                     stock_number = stock_number.replace('<', '')
                     stock_number = stock_number.replace('>', '')
-                    print(stock_number)
 
                     cur.execute('insert into kabutan_columns_vs_stocks (kabutan_column_id, stock_number) values(%s, %s) ', (int(column_id), int(stock_number)))
     

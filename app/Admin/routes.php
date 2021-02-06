@@ -22,4 +22,5 @@ Route::group([
     $router->resource('attention', 'AttentionNoteController');
     $router->resource('stockdatabase', 'StockDatabaseController');
     $router->resource('lionnote', 'LionnoteDatabaseController');
+    $router->resource('indivilionpdf', 'IndiviLionpdfController');
 });

@@ -57,7 +57,7 @@ class OneColumnScraping():
     
         stock_number_list = re.findall('<\d{4}>', article)
 
-        # cur.execute('insert into kabutan_columns (title, description, category, date) values(%s, %s, %s, %s) ', (str(title), str(article), str(kitahama_category), date))
+        cur.execute('insert into kabutan_columns (title, description, category, date) values(%s, %s, %s, %s) ', (str(title), str(article), str(kitahama_category), date))
 
         if (len(stock_number_list) != 0):
             column_id = cur.lastrowid
@@ -65,9 +65,8 @@ class OneColumnScraping():
             for stock_number in stock_number_list:
                 stock_number = stock_number.replace('<', '')
                 stock_number = stock_number.replace('>', '')
-                print(stock_number)
 
-                # cur.execute('insert into kabutan_columns_vs_stocks (kabutan_column_id, stock_number) values(%s, %s) ', (int(column_id), int(stock_number)))
+                cur.execute('insert into kabutan_columns_vs_stocks (kabutan_column_id, stock_number) values(%s, %s) ', (int(column_id), int(stock_number)))
     
         sleep(2)
                     
