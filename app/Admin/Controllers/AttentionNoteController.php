@@ -127,7 +127,7 @@ class AttentionNoteController extends Controller
      */
      public function detail($id)
      {
-       $show = new Show(Reviewnote::findOrFail($id));
+       $show = new Show(Topfifteen::findOrFail($id));
 
        $show->id('ID');
 
