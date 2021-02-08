@@ -8,6 +8,8 @@ use App\Extrastock;
 
 class Extrastock extends Model
 {
+    protected $fillable=['stock_number','stock_name'];
+
     protected $dates = [
         'date',
     ];
@@ -15,3 +17,4 @@ class Extrastock extends Model
         return $this->belongTo(Topfifteen::class,'topfifteen_id');
     }
 }
+
