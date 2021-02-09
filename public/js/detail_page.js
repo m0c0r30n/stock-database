@@ -9,7 +9,7 @@ $(function(){
 
   $(".search_stock .fa-search").on('click', function(){
     var stock_number = $("#search_stock_number").val();
-    location.href = './stockdata/'+stock_number;
+    location.href = './'+stock_number;
   });
 
 });
