@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\DB;
 
 
 use App\Sikihodata;
+use App\Stock;
 use App\Stockdatabase;
 use App\Stockinfo;
 use App\Stockchange;
@@ -54,6 +55,7 @@ class StockDatabaseController extends Controller
     }
 
     public function detail($stock_number) {
+        $stocks = Stock::where('code', $stock_number)->get();
         $stock_database = Stockdatabase::where('stock_number', $stock_number)->get();
         $stock_database_id = [];
         foreach ($stock_database as $v) {
@@ -62,11 +64,11 @@ class StockDatabaseController extends Controller
         }
         
         $sikiho_datas = Sikihodata::latest()->where('stockdatabase_id', $stock_database_id[0])->get();
-        
+        $indivilions = Stockinfo::latest()->where('stock_number', $stock_number)->get();
         $wadai_datas = WadaiData::where('stock_number', $stock_number)->orderBy('date', 'desc')->withCasts(['date' => 'date'])->get();
         $lion_notes = Lionnote::where('stock_number', $stock_number)->orderBy('date', 'desc')->withCasts(['date' => 'date'])->get();
         // var_dump($wadai_datas);exit();
-        return view('stockdatabase.detail', ["stock_database" => $stock_database, "sikiho_datas" => $sikiho_datas, "wadai_datas" => $wadai_datas]);
+        return view('stockdatabase.detail', ["stocks" => $stocks, "stock_database" => $stock_database, "sikiho_datas" => $sikiho_datas, "wadai_datas" => $wadai_datas, "indivilions" => $indivilions]);
     }
 
 }
