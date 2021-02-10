@@ -30,6 +30,7 @@
       <div class="flex">
         <h1>{{ $stocks[0]["name"] }} ({{ $stocks[0]["code"] }})　</h1><h2 style="margin-left: 50px;">{{ $stocks[0]["market"] }} / {{ $stocks[0]["category"] }}</h2>
       </div>
+      @if (isset($sikiho_datas[0]))
       <div class="sikiho_content">
         <h2>四季報タイトル : {{ $sikiho_datas[0]["sikiho_title"]}}</h2>
         <div class="sikiho_sentence">
@@ -39,6 +40,9 @@
           <p class="stock_perspect">株価見通し : </p><p>{{ $sikiho_datas[0]["perspective"]}}</p>
         </div>
       </div>
+      @else
+      <h2>四季報データなし<h2>
+      @endif
       <div class="second_floor">
         <div class="ifis_content">
           <img src="https://ifis-image.s3-ap-northeast-1.amazonaws.com/ifis_{{ $stocks[0]['code'] }}.png" alt="{{ $stocks[0]['name']}}のIfis画像">
