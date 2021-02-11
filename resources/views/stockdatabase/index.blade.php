@@ -31,12 +31,9 @@
       <div class="topfifteen_content">
         <h1>先週のらいおんまる注目銘柄6+9</h1>
         <ul>
-        @for ($i = 1; $i < 20; $i++)
-          @if (isset($topfifteen_datas[0]["stockname".$i]))
-            <?php preg_match('/\d{4}/', $topfifteen_datas[0]["stockname".$i], $stock_number); ?>
-            <a href="{{ action('StockDatabaseController@detail', $stock_number[0]) }}"><li>{{ $topfifteen_datas[0]["stockname".$i] }}</li></a>
-          @endif
-        @endfor
+        @foreach ($topfifteen_datas as $v)
+          <a href="{{ action('StockDatabaseController@detail', $v->stock_number) }}"><li>{{ $v->stock_name }} ({{ $v->stock_number }})</li></a>
+        @endforeach
         </ul>
       </div>
       <div class="wadai_content">

@@ -49,6 +49,8 @@ class StockDatabaseController extends Controller
         $wadai_datas = $array_result;
         //////////////////////
         $topfifteen_datas = Topfifteen::latest()->get();
+        $topfifteen_datas = Stockinfo::latest()->where('topfifteen_id', $topfifteen_datas[0]['id'])->get();
+        // var_dump($topfifteen_datas);exit();
         $stockchange_datas = Stockchange::latest()->get();
         
         return view('stockdatabase.index', ["topfifteen_datas" => $topfifteen_datas, "wadai_datas" => $wadai_datas, "stockchange_datas" => $stockchange_datas]);
