@@ -13,7 +13,7 @@ class AddStocknumberSikihodatarsTable extends Migration
      */
     public function up()
     {
-        Schema::table('sikiho_data', function (Blueprint $table) {
+        Schema::table('sikihodatas', function (Blueprint $table) {
             $table->bigInteger('stock_number');
         });
     }
@@ -25,7 +25,7 @@ class AddStocknumberSikihodatarsTable extends Migration
      */
     public function down()
     {
-        Schema::table('sikiho_data', function (Blueprint $table) {
+        Schema::table('sikihodatas', function (Blueprint $table) {
             //
         });
     }

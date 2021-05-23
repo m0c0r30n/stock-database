@@ -13,7 +13,7 @@ class DeleteIdSikihodatarsTable extends Migration
      */
     public function up()
     {
-        Schema::table('sikiho_data', function (Blueprint $table) {
+        Schema::table('sikihodatas', function (Blueprint $table) {
             $table->dropColumn('stockdatabase_id');
         });
     }
@@ -25,7 +25,7 @@ class DeleteIdSikihodatarsTable extends Migration
      */
     public function down()
     {
-        Schema::table('sikiho_data', function (Blueprint $table) {
+        Schema::table('sikihodatas', function (Blueprint $table) {
             //
         });
     }
