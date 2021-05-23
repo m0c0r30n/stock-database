@@ -19,8 +19,8 @@ class StockdataScraping():
             host='localhost',
             port=3306,
             user='root',
-            password='',
-            database='stockdatabase',
+            password='moco0205',
+            database='kabudatabase',
             use_unicode=True,
             charset="utf8"
         )
