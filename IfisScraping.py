@@ -1,4 +1,3 @@
-import chromedriver_binary
 import requests
 import MySQLdb
 import re
