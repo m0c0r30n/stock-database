@@ -30,6 +30,10 @@
       <div class="flex">
         <h1>{{ $stocks[0]["name"] }} ({{ $stocks[0]["code"] }})　</h1><h2 style="margin-left: 50px;">{{ $stocks[0]["market"] }} / {{ $stocks[0]["category"] }}</h2>
       </div>
+      <div style="margin-top:50px;margin-bottom:50px;" class="once_floor">
+        <img src="https://seacret-holder.s3.ap-northeast-1.amazonaws.com/private/seacret_hike/2021_06_11/ita_2021_06_11_{{ $stocks[0]['code'] }}.png">
+        <img src="https://seacret-holder.s3.ap-northeast-1.amazonaws.com/private/seacret_ku/2021_06_11/ku_2021_06_11_{{ $stocks[0]['code'] }}.png">
+      </div>
       @if (isset($sikiho_datas[0]))
       <div class="sikiho_content">
         <h2>四季報タイトル : {{ $sikiho_datas[0]["sikiho_title"]}}</h2>
