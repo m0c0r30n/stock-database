@@ -18,7 +18,7 @@ class CreateIrekaestocksTable extends Migration
             $table->bigInteger('irekaekensho_id');
             $table->bigInteger('stock_number')->nullable();
             $table->string('irekae_before')->nullable();
-            $table->string('irekae_after'->nullable());
+            $table->string('irekae_after')->nullable();
             $table->text('info')->nullable();
             $table->text('result')->nullable();
             $table->timestamps();
