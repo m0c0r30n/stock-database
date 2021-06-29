@@ -146,7 +146,7 @@ class IrekaeKenshoController extends Controller
             $form->date('date', '日付');
          
         })->tab('個別銘柄情報',function($form) {
-            $form->hasMany('stocks','銘柄解説',function(Form\NestedForm $nestedForm) {
+            $form->hasMany('irekaestocks','銘柄解説',function(Form\NestedForm $nestedForm) {
                 $nestedForm->hidden('id');
                 $nestedForm->number('stock_number','銘柄コード');
                 $nestedForm->image('irekae_before','入れ替え銘柄チャート前');
