@@ -6,11 +6,15 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use App\Jobs\MakeTopPdf;
 use App\Jobs\MakeReviewPdf;
+use App\Jobs\MakeIrekaePdf;
 
 use App\Reviewnote;
 use App\Stockchange;
 use App\Topfifteen;
 use App\Stockinfo;
+use App\Irekaekensho;
+use App\Irekaestock;
+
 
 class MakePdfController extends Controller
 {
@@ -54,6 +58,15 @@ class MakePdfController extends Controller
         $stock_info = Stockinfo::where('topfifteen_id', '=', $id)->orderBy('stock_ranking', 'desc')->get();
         $this->dispatch(new MakeTopPdf($id, $top_fifteen, $stock_info, "hogehoge"));
         $created_at = $top_fifteen['created_at']->format('Y_m_d');
+        return view('makepdf.pdf_download', ['created_at' => $created_at]);
+    }
+
+    public function irekae($id)
+    {
+        $irekae_kensho = Irekaekensho::find($id);
+        $irekae_stock = Irekaestock::where('irekaekensho_id', '=', $id)->get();
+        $this->dispatch(new MakeIrekaePdf($id, $irekae_kensho, $irekae_stock, "hogehoge"));
+        $created_at = $irekae_kensho['created_at']->format('Y_m_d');
         return view('makepdf.pdf_download', ['created_at' => $created_at]);
     }
 }

@@ -163,6 +163,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Laravelium\Sitemap\SitemapServiceProvider::class,
         Barryvdh\Snappy\ServiceProvider::class,
+        // Laracasts\Utilities\JavaScript\JavaScriptServiceProvider::class,
         /*
          * Package Service Providers...
          */

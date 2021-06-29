@@ -5,11 +5,12 @@ html{
 }
 
 header {
-    color: #646464;
+    color: #fff;
     padding: 10px 0;
     margin: 0 auto;
     height: 60px;
     box-shadow: 2px 2px 6px #cccccc;
+    background-color: rgb(33,34,35);
 }
 .header {
     position: relative;
@@ -17,6 +18,7 @@ header {
     justify-content: space-between;
     width: 1200px;
     margin: 0 auto;
+    align-items: center;
 }
 
 .header_nav {
@@ -27,54 +29,91 @@ ul {
     list-style: none;
 }
 
+.logo {
+    color: #fff;
+    font-size: 30px;
+    text-decoration: none;
+}
+
 .header_nav_list a {
-    color: #646464;
+    color: #fff;
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
     margin-right: 50px;
 }
 
+.search_area_wrap {
+    background-color: rgb(41,154,168);
+    margin-top: 60px;
+    height: 84px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+
+.search_area {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: #fff;
+}
+
+.search_area p {
+    margin: 8px;
+    color: #fff;
+}
+
+.search_area a {
+    margin: 8px;
+    color: #fff;
+}
+
 .search_stock {
-    margin-right: 15px;
     position: relative;
-    width: 150px;
-    height: 36px;
-    margin: auto;
+    width: 320px;
     font-weight: bold;
     line-height: 0;
 }
 
 #search_stock_number {
     letter-spacing: 1px;
-    position       : absolute;
-    display        : block;              /* ブロック化            */
-    box-sizing     : border-box;         /* 枠線,余白を含んだ長さ */
-    height         : 36px;               /* BOXの高さ             */
-    width          : 100%;               /* テキスト入力の幅      */
-    margin         : 0;                  /* 外余白                */
-    padding        : 0 45px 0 12px;       /* 内余白                */
-    border         : 2px solid #666;     /* 枠線　幅,実践,色      */
-    border-radius  : 6px;                /* 角丸                  */
-    color          : #333;               /* 文字色                */
-    font-size      : 16px;               /* フォントサイズ        */
-    outline        : 0;                  /* 入力の薄い枠を非表示  */
+    box-sizing: border-box;
+    height: 45px;
+    width: 340px;
+    padding: 0 45px 0 12px;
+    border: 2px solid #fff;
+    border-radius: 12px;
+    color: #333;
+    font-size: 16px;
+    outline: 0;
 }
 
 .fa-search {
-    position       : absolute;
-    box-sizing     : border-box;         /* 枠線,余白を含んだ長さ */
-    height         : 26px;               /* 入力の高さ            */
-    margin         : 0;                  /* 外余白                */
-    padding        : 6px 10px;           /* 内余白                */
-    top            : 6px;                /* ボタン表示位置(上)    */
-    right          : 6px;                /* ボタン表示位置(右)    */
-    border         : none;               /* 枠線　幅,実践,色      */
-    border-radius  : 6px;                /* 右上下の角丸          */
-    background     : #2C7CFF	;               /* ボタンの色            */
-    color          : #fff;               /* 文字色                */
-    cursor         : pointer;            /* カーソル設定          */
+    position: absolute;
+    box-sizing: border-box;
+    height: 34px;
+    margin: 0;
+    padding: 9px 9px;
+    top: 6px;
+    right: -10px;
+    border: none;
+    border-radius: 20px;
+    background: rgb(238,73,81);
+    color: #fff;
+    cursor: pointer;
 }
+
+.search_area_right p {
+    font-weight: bold;
+}
+
+.soaring_word {
+    margin-left: 16px;
+}
+
+
 .header img {
     width: 200px;
     position: absolute;
@@ -93,18 +132,18 @@ main {
 }
 
 .wrapper {
-    display: flex;
-    justify-content: center;
+    margin-top: 30px;
+    background-color: #a9a9a9;
 }
 
-.wrapper ul{
+/* .wrapper ul{
     border: 2px #333 solid;
     border-radius: 20px;
     width: 300px;
     padding: 15px 10px 15px 20px;
     list-style: none;
     height: 580px;
-}
+} */
 
 .topfifteen_content, .wadai_content, .stockchange_content {
     margin: 0 30px;
@@ -118,4 +157,156 @@ main {
 .wrapper li {
     line-height: 30px;
     font-size: 17px;
+}
+
+
+/* 株価指数 */
+
+.market_top_upper, .market_top_lower {
+    display: flex;
+    justify-content: space-around;
+    width: 1080px;
+    margin: 0 auto;
+}
+
+.indexes_area, .ranking_area, .news_area, .kessan_area {
+    background-color: #fff;
+    margin-top: 30px;
+    border-radius: 12px;
+}
+
+.indexes_list_upper, .indexes_list_lower {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    margin-top: 5px;
+}
+
+.indexes_list_upper a, .indexes_list_upper p, .indexes_list_lower a, .indexes_list_lower p  {
+    font-size: 12px;
+    display: block;
+    margin: 0 2px;
+    text-decoration: none;
+    color: #555555;
+}
+
+
+/* ランキング */
+
+.ranking_area, .news_area, .kessan_area {
+    width: 510px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.ranking_area .heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.ranking_area button {
+    font-size: 12px;
+    border: none;
+    width: 80px;
+    height: 26px;
+    background-color: #dfdfdfdf;
+}
+
+.ranking_area button:not(:last-child) {
+    border-right: 1px solid #cccccc;
+}
+
+.ranking_kind {
+    display: flex;
+    justify-content: center;
+    box-shadow: 2px 2px 4px #aaaaaa;
+    border-radius: 4px;
+}
+
+.stock_table {
+    margin: 10px auto;
+    padding: 0 30px;
+}
+
+table{
+    width: 100%;
+    border-spacing: 0;
+}
+
+table th{
+    font-size: 14px;
+}
+
+table td{
+    border-bottom: solid 2px #ddd;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 13px;
+}
+
+
+/* もっと見るボタン*/
+
+a.btn-flat {
+    width: 120px;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 8px 20px;
+    color: #fff;
+    background: #000;
+    font-size: 15px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+a.btn-flat span {
+    position: relative;
+}
+.news_area {
+    height: 310px;
+}
+
+.news_area .heading{
+    margin-left: 20px;
+}
+
+.news_list {
+    display: flex;
+    align-items: center;
+    line-height: 2px;
+    
+}
+
+.news_list li {
+    margin-right: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.news_list a {
+    font-size: 13px;
+    text-decoration: none;
+    color: #0645AD;
+}
+
+/* カレンダー*/
+td.fc-day-sat {
+    background-color: #eaf4ff;
+}
+td.fc-day-sun {
+    background-color: #ffeaea;
+}
+
+#calendar {
+    width: 80%;
+}
+
+table.fc-scrollgrid-sync-table tr:last-child {
+    display: none;
 }

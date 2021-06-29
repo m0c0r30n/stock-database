@@ -1,0 +1,69 @@
+.page{
+    text-align:center;
+    height:100%;
+    page-break-after: always;
+    page-break-inside: avoid;
+}
+
+body {
+    font-family: "Noto Serif CJK JP";
+    font-weight: 500;
+}
+
+.page:last-child{
+    page-break-after: auto;
+}
+
+.h1 {
+    font-size: 40px;
+    text-align: center;
+}
+
+
+img {
+    width: 100%;
+}
+
+#pickup_stock_title {
+    background-color: orange;
+    color: #fff;
+    font-size: 100px;
+    padding: 10px 30px;
+    text-align: center;
+    margin: 0px 0px 60px 0px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    font-size: 35px;
+    text-align: left;
+    margin: 20px 0;
+}
+
+.stock_name {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.additional_info {
+    display: flex;
+    justify-content: space-around;
+}
+
+.dekidaka {
+    font-size: 21px;
+}
+
+.overunder {
+    font-size: 21px;
+}
+
+.stock_description {
+    font-size: 28px;
+    text-align: left;
+    line-height: 1.6;
+}
