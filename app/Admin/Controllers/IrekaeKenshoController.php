@@ -98,8 +98,8 @@ class IrekaeKenshoController extends Controller
 
         $grid->date('日付')->setAttributes(['style' => 'min-width:150px;'])->editable();
 
-        $grid->created_at('Created at')->label('danger');
-        $grid->updated_at('Updated at')->badge();
+        //$grid->created_at('Created at')->label('danger');
+        //$grid->updated_at('Updated at')->badge();
         $grid->actions(function ($actions) {
             $actions->add(new IrekaeReplicate);
         });
@@ -144,8 +144,6 @@ class IrekaeKenshoController extends Controller
         $form->tab('入れ替え検証',function($form) {
             $form->hidden('id');
             $form->date('date', '日付');
-            $form->display('created_at', 'Created At');
-            $form->display('updated_at', 'Updated At');
          
         })->tab('個別銘柄情報',function($form) {
             $form->hasMany('irekaestocks','銘柄解説',function(Form\NestedForm $nestedForm) {
