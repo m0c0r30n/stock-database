@@ -98,8 +98,8 @@ class IrekaeKenshoController extends Controller
 
         $grid->date('日付')->setAttributes(['style' => 'min-width:150px;'])->editable();
 
-        // $grid->created_at('Created at')->label('danger');
-        // $grid->updated_at('Updated at')->badge();
+        //$grid->created_at('Created at')->label('danger');
+        //$grid->updated_at('Updated at')->badge();
         $grid->actions(function ($actions) {
             $actions->add(new IrekaeReplicate);
         });
