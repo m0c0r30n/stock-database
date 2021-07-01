@@ -44,7 +44,7 @@ class MakeIrekaePdf implements ShouldQueue
         $week = array( "日", "月", "火", "水", "木", "金", "月" );
         $stock_name = [];
         foreach ($this->irekae_stock as $v) {
-            $tmp = Stock::where('stock_number', $v->stock_number)->first();
+            $tmp = Stock::where('code', $v->stock_number)->first();
             array_push($stock_name, $tmp);
         }
         
