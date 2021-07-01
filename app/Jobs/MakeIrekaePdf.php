@@ -40,12 +40,11 @@ class MakeIrekaePdf implements ShouldQueue
     public function handle()
     {
         $location = storage_path() . '/pdf/';
-        $week_day = date('w', strtotime($irekae_kensho->date));
+        $week_day = date('w', strtotime($this->irekae_kensho->date));
         $week = array( "日", "月", "火", "水", "木", "金", "月" );
         $stock_name = [];
         foreach ($this->irekae_stock as $v) {
-            $tmp = Stock::where('stock_number', $v->stock_number)->first()
-            var_dump($tmp);exit();
+            $tmp = Stock::where('stock_number', $v->stock_number)->first();
             array_push($stock_name, $tmp);
         }
         
