@@ -49,21 +49,14 @@ li {
     text-align: left;
 }
 
-.additional_info {
-    display: flex;
-    justify-content: space-around;
+.stock_info {
+    border: 2px solid black;
+    padding: 40px;
+    font-size: 30px;
 }
 
-.dekidaka {
-    font-size: 21px;
-}
-
-.overunder {
-    font-size: 21px;
-}
-
-.stock_description {
+.stock_result {
+    border: 2px solid black;
+    padding: 20px;
     font-size: 28px;
-    text-align: left;
-    line-height: 1.6;
 }
