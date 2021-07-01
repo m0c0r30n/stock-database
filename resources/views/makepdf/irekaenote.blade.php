@@ -6,27 +6,16 @@
     <title>PDF作成</title>
   </head>
 <body>
-  <div class="page">
-    <img class="cover" src="https://stock-database.s3.ap-northeast-1.amazonaws.com/{{ $top_fifteen->cover }}">
-  </div>
-  <div class="page">
-    <h1 id="pickup_stock_title">注目銘柄TOP15</h2>
-    <ul>
-      <?php $stock_count = count($stock_info); ?>
-      @for ($i = $stock_count-1; $i >= 0; $i--)
-      <li>{{ $stock_count-$i }}. {{ $stock_info[$i]->stock_name }} ({{ $stock_info[$i]->stock_number }})</li>
-      @endfor
-    </ul>
-  </div>
+  <?php $stock_count = count($irekae_stock); ?>
   @for ($n = 0; $n < $stock_count; $n++)
   <div class="page">
-    <h2 class="stock_name">
-      第{{ $stock_info[$n]->stock_ranking }}位 {{ $stock_info[$n]->stock_name }}
-      <span class="dekidaka">出来高→{{ $stock_info[$n]->dekidaka }}</span>
-      <span class="overunder">O/U→{{ $stock_info[$n]->overunder }}</spanx>
-    </h2>
-    <img src="https://stock-database.s3.ap-northeast-1.amazonaws.com/{{ $stock_info[$n]->chart_picture }}">
-    <p class="stock_description">{!! nl2br(e($stock_info[$n]->description)) !!}</p>
+    <h1 id="irekae_stock_title">{{ $irekae_kensho->date->format('m月d日') }}({{ $youbi }}) {{ $stock_name[$n] }}({{ $irekae_stock[$n]->stock_number }})</h2>
+    <img src="https://stock-database.s3.ap-northeast-1.amazonaws.com/{{ $irekae_stock[$n]->irekae_before }}">
+    <p class="stock_info">{!! nl2br(e($irekae_stock[$n]->info)) !!}</p>
+  </div>
+  <div class="page">
+    <img src="https://stock-database.s3.ap-northeast-1.amazonaws.com/{{ $irekae_stock[$n]->irekae_after }}">
+    <p class="stock_result">{!! nl2br(e($irekae_stock[$n]->result)) !!}</p>
   </div>
   @endfor
 </body>

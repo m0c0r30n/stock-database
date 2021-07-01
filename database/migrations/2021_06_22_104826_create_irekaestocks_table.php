@@ -21,7 +21,6 @@ class CreateIrekaestocksTable extends Migration
             $table->string('irekae_after')->nullable();
             $table->text('info')->nullable();
             $table->text('result')->nullable();
-            $table->timestamps();
         });
     }
 

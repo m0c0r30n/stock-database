@@ -8,6 +8,7 @@ use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Support\Facades\Storage;
+use App\Stock;
 
 class MakeIrekaePdf implements ShouldQueue
 {
@@ -39,8 +40,16 @@ class MakeIrekaePdf implements ShouldQueue
     public function handle()
     {
         $location = storage_path() . '/pdf/';
+        $week_day = date('w', strtotime($irekae_kensho->date));
+        $week = array( "日", "月", "火", "水", "木", "金", "月" );
+        $stock_name = [];
+        foreach ($this->irekae_stock as $v) {
+            $tmp = Stock::where('stock_number', $v->stock_number)->first()
+            array_push($stock_name, $tmp);
+        }
+        
         $filename = $this->irekae_kensho->date->format('Y_m_d').'_irekae_note.pdf';
-        $pdf = \PDF::loadView('makepdf.irekaenote',['id' => $this->id, 'irekae_kensho' => $this->irekae_kensho, 'irekae_stock' => $this->irekae_stock])
+        $pdf = \PDF::loadView('makepdf.irekaenote',['id' => $this->id, 'stock_name' => $stock_name, 'irekae_kensho' => $this->irekae_kensho, 'irekae_stock' => $this->irekae_stock, 'youbi' => $week[$week_day]])
             ->setOption('encoding', 'utf-8')
             ->setOption('user-style-sheet', base_path() . '/public/css/irekae_pdf.css');
 
