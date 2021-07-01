@@ -45,7 +45,7 @@ class MakeIrekaePdf implements ShouldQueue
         $stock_name = [];
         foreach ($this->irekae_stock as $v) {
             $tmp = Stock::where('code', $v->stock_number)->first();
-            array_push($stock_name, $tmp);
+            array_push($stock_name, $tmp->name);
         }
         
         $filename = $this->irekae_kensho->date->format('Y_m_d').'_irekae_note.pdf';
