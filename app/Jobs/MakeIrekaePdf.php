@@ -45,6 +45,7 @@ class MakeIrekaePdf implements ShouldQueue
         $stock_name = [];
         foreach ($this->irekae_stock as $v) {
             $tmp = Stock::where('stock_number', $v->stock_number)->first()
+            var_dump($tmp);exit();
             array_push($stock_name, $tmp);
         }
         
