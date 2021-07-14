@@ -19,14 +19,24 @@ document.addEventListener('DOMContentLoaded', function() {
     duration: {days: 31},
   };
   
+  
   var calendarEl = document.getElementById('calendar');
   const calendar = new FullCalendar.Calendar(calendarEl, {
-      views: {
-        custom: CustomViewConfig
-      },
-      width: 300,
-      navLinks: false, 
-      locale: 'ja',
+    dayCellContent: function(e) {
+      e.dayNumberText = e.dayNumberText.replace('日', '');
+    },
+    views: {
+      custom: CustomViewConfig
+    },
+    width: 300,
+    height: 272,
+    navLinks: false, 
+    locale: 'ja',
+    headerToolbar: {
+      left:   'title',
+      center: '',
+      right:  'prev,next'
+    }
   });
   // var calendarEl = document.getElementById('calendar');
   // var calendar = new FullCalendar.Calendar(calendarEl, {

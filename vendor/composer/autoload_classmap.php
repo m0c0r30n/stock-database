@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Admin\\Actions\\Post\\IrekaeReplicate' => $baseDir . '/app/Admin/Actions/Post/IrekaeReplicate.php',
     'App\\Admin\\Actions\\Post\\Replicate' => $baseDir . '/app/Admin/Actions/Post/Replicate.php',
     'App\\Admin\\Actions\\Post\\TopReplicate' => $baseDir . '/app/Admin/Actions/Post/TopReplicate.php',
     'App\\Admin\\Controllers\\AttentionNoteController' => $baseDir . '/app/Admin/Controllers/AttentionNoteController.php',
@@ -14,6 +15,7 @@ return array(
     'App\\Admin\\Controllers\\ExampleController' => $baseDir . '/app/Admin/Controllers/ExampleController.php',
     'App\\Admin\\Controllers\\HomeController' => $baseDir . '/app/Admin/Controllers/HomeController.php',
     'App\\Admin\\Controllers\\IndiviLionpdfController' => $baseDir . '/app/Admin/Controllers/IndiviLionpdfController.php',
+    'App\\Admin\\Controllers\\IrekaeKenshoController' => $baseDir . '/app/Admin/Controllers/IrekaeKenshoController.php',
     'App\\Admin\\Controllers\\LionnoteDatabaseController' => $baseDir . '/app/Admin/Controllers/LionnoteDatabaseController.php',
     'App\\Admin\\Controllers\\MakePdfController' => $baseDir . '/app/Admin/Controllers/MakePdfController.php',
     'App\\Admin\\Controllers\\ReviewNoteAdminController' => $baseDir . '/app/Admin/Controllers/ReviewNoteAdminController.php',
@@ -52,6 +54,9 @@ return array(
     'App\\Http\\Requests\\ContactRequest' => $baseDir . '/app/Http/Requests/ContactRequest.php',
     'App\\Indexes' => $baseDir . '/app/Indexes.php',
     'App\\Indivilionpdf' => $baseDir . '/app/Indivilionpdf.php',
+    'App\\Irekaekensho' => $baseDir . '/app/Irekaekensho.php',
+    'App\\Irekaestock' => $baseDir . '/app/Irekaestock.php',
+    'App\\Jobs\\MakeIrekaePdf' => $baseDir . '/app/Jobs/MakeIrekaePdf.php',
     'App\\Jobs\\MakeReviewPdf' => $baseDir . '/app/Jobs/MakeReviewPdf.php',
     'App\\Jobs\\MakeTopPdf' => $baseDir . '/app/Jobs/MakeTopPdf.php',
     'App\\Lib\\Area' => $baseDir . '/app/Lib/Area.php',

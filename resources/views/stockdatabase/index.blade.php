@@ -154,7 +154,6 @@
             </div>
           </div>
           <div id='calendar'></div>
-          <a href="" class="btn btn-flat"><span>もっと見る</span></a>
         </div>
       </div>
       <script language="javascript" type="text/javascript">

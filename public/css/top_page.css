@@ -304,9 +304,42 @@ td.fc-day-sun {
 }
 
 #calendar {
-    width: 80%;
+    width: 54%;
+    margin-left: 20px;
 }
 
 table.fc-scrollgrid-sync-table tr:last-child {
     display: none;
+}
+
+.fc .fc-toolbar.fc-header-toolbar {
+    margin-bottom: 6px;
+}
+
+.fc .fc-toolbar-title {
+    font-size: 16px;
+}
+.fc-prev-button, .fc-next-button {
+    font-size: 12px !important;
+}
+
+button.fc-today-button {
+    display: none;
+}
+
+.kessan_area .heading {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 30px;
+}
+
+.fc-daygrid-day-number {
+    font-size: 10px;
+}
+
+.fc-daygrid-day-events {
+    min-height: 10px !important;
 }
