@@ -42,6 +42,7 @@ li {
 }
 
 .subject {
+    margin-top : 20px;
     font-size: 32px;
     font-weight: bold;
     text-align: left;
