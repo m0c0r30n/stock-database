@@ -25,12 +25,11 @@ img {
 }
 
 #pickup_stock_title {
-    background-color: orange;
-    color: #fff;
-    font-size: 100px;
-    padding: 10px 30px;
+    font-size: 50px;
+    text-decoration-thickness: 6px;
     text-align: center;
     margin: 0px 0px 60px 0px;
+    text-decoration: underline;
 }
 
 ul {
