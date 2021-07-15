@@ -28,7 +28,7 @@ img {
     font-size: 36px;
     text-decoration-thickness: 6px;
     text-align: center;
-    margin: 0px 0px 60px 0px;
+    margin: 0px 0px 40px 0px;
 }
 
 ul {
@@ -42,15 +42,16 @@ li {
 }
 
 .subject {
-    font-size: 40px;
+    font-size: 28px;
     font-weight: bold;
     text-align: left;
+    margin-bottom: 20px;
 }
 
 .stock_info {
     border: 2px solid black;
-    padding: 40px;
-    font-size: 30px;
+    padding: 20px;
+    font-size: 28px;
 }
 
 .stock_result {
