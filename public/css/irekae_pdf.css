@@ -42,7 +42,7 @@ li {
 }
 
 .subject {
-    font-size: 28px;
+    font-size: 32px;
     font-weight: bold;
     text-align: left;
     margin-bottom: 20px;
@@ -52,10 +52,13 @@ li {
     border: 2px solid black;
     padding: 20px;
     font-size: 28px;
+    text-align: left;
 }
 
 .stock_result {
     border: 2px solid black;
     padding: 20px;
     font-size: 28px;
+    text-align: left;
+
 }
