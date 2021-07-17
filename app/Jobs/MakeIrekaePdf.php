@@ -51,7 +51,7 @@ class MakeIrekaePdf implements ShouldQueue
             $tomorrow = date("Y-m-d", strtotime($d . "+1 day"));
             $nikkei_tmp = Indexes::where('stock_number', '=', 1)->whereDate('date', '=', $tomorrow)->first();
             $mothers_tmp = Indexes::where('stock_number', '=', 12)->whereDate('date', '=', $tomorrow)->first();
-
+            var_dump($nikkei_tmp);exit();
             array_push($nikkei, $nikkei_tmp);
             array_push($mothers, $mothers_tmp);
         }
