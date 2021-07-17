@@ -11,12 +11,13 @@
   <div class="page">
     <h1 id="irekae_stock_title">{{ $irekae_kensho->date->format('m月d日') }} ({{ $youbi }}) {{ $stock_name[$n] }} ({{ $irekae_stock[$n]->stock_number }})</h1>
     <img src="https://stock-database.s3.ap-northeast-1.amazonaws.com/{{ $irekae_stock[$n]->irekae_before }}">
-    <p class="subject">【会社情報】</h4>
+    <p class="subject">【会社情報】</p>
     <p class="stock_info">{!! nl2br(e($irekae_stock[$n]->info)) !!}</p>
   </div>
   <div class="page">
+    <p class="subject">【当日の地合い状況】</p>
     <img src="https://stock-database.s3.ap-northeast-1.amazonaws.com/{{ $irekae_stock[$n]->irekae_after }}">
-    <p class="subject">【結果とまとめ】</h4>
+    <p class="subject">【結果とまとめ】</p>
     <p class="stock_result">{!! nl2br(e($irekae_stock[$n]->result)) !!}</p>
   </div>
   @endfor
