@@ -65,7 +65,8 @@ class MakePdfController extends Controller
     {
         $irekae_kensho = Irekaekensho::find($id);
         $irekae_stock = Irekaestock::where('irekaekensho_id', '=', $id)->get();
-        $this->dispatch(new MakeIrekaePdf($id, $irekae_kensho, $irekae_stock, "hogehoge"));
+        
+        $this->dispatch(new MakeIrekaePdf($id, $irekae_kensho, $irekae_stock, $nikkei_datas, $mothers_datas, "hogehoge"));
         $created_at = $irekae_kensho['created_at']->format('Y_m_d');
         return view('makepdf.pdf_download', ['created_at' => $created_at]);
     }

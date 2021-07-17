@@ -16,6 +16,15 @@
   </div>
   <div class="page">
     <p class="subject">【当日の地合い状況】</p>
+    <table>
+      <tr>
+        <th>日経平均株価(前日値=>始値=>終値)</th>
+        <th>マザーズ指数(前日値=>始値=>終値)</th>
+      </tr>
+      <tr>
+        <td>{{ $nikkei_datas[$n]->pastprice }}=>{{ $nikkei_datas[$n]->openprice }}=>{{ $nikkei_datas[$n]->endprice }}</td>
+        <td>{{ $mothers_datas[$n]->pastprice }}=>{{ $mothers_datas[$n]->openprice }}=>{{ $mothers_datas[$n]->endprice }}</td>
+      </tr>
     <img src="https://stock-database.s3.ap-northeast-1.amazonaws.com/{{ $irekae_stock[$n]->irekae_after }}">
     <p class="subject">【結果とまとめ】</p>
     <p class="stock_result">{!! nl2br(e($irekae_stock[$n]->result)) !!}</p>
