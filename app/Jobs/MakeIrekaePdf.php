@@ -61,6 +61,8 @@ class MakeIrekaePdf implements ShouldQueue
             array_push($mothers, $mothers_tmp);
         }
 
+        var_dump($nikkei);exit(); 
+
         foreach ($this->irekae_stock as $v) {
             $tmp = Stock::where('code', $v->stock_number)->first();
             array_push($stock_name, $tmp->name);
