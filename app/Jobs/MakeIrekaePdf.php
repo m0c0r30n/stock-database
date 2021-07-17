@@ -25,13 +25,11 @@ class MakeIrekaePdf implements ShouldQueue
      *
      * @return void
      */
-    public function __construct($id, $irekae_kensho, $irekae_stock, $nikkei_datas, $mothers_datas, $text)
+    public function __construct($id, $irekae_kensho, $irekae_stock, $text)
     {
         $this->id = $id;
         $this->irekae_kensho = $irekae_kensho;
         $this->irekae_stock = $irekae_stock;
-        $this->nikkei_datas = $nikkei_datas;
-        $this->mothers_datas = $mothers_datas;
         $this->text = $text;
     }
 
