@@ -22,8 +22,8 @@
         <th>マザーズ指数(前日値=>始値=>終値)</th>
       </tr>
       <tr>
-        <td>{{ $nikkei_datas[$n]->pastprice }}=>{{ $nikkei_datas[$n]->openprice }}=>{{ $nikkei_datas[$n]->endprice }}</td>
-        <td>{{ $mothers_datas[$n]->pastprice }}=>{{ $mothers_datas[$n]->openprice }}=>{{ $mothers_datas[$n]->endprice }}</td>
+        <td>{{ $nikkei_datas[$n]["pastprice"] }}=>{{ $nikkei_datas[$n]["openprice"] }}=>{{ $nikkei_datas[$n]["endprice"] }}</td>
+        <td>{{ $mothers_datas[$n]["pastprice"] }}=>{{ $mothers_datas[$n]["openprice"] }}=>{{ $mothers_datas[$n]["endprice"] }}</td>
       </tr>
     <img src="https://stock-database.s3.ap-northeast-1.amazonaws.com/{{ $irekae_stock[$n]->irekae_after }}">
     <p class="subject">【結果とまとめ】</p>
