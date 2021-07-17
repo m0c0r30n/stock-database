@@ -49,7 +49,7 @@ class MakeIrekaePdf implements ShouldQueue
 
         foreach ($this->irekae_kensho->date as $d) {
             $tomorrow = date("Y-m-d", strtotime($d . "+1 day"));
-            var_dump($nikkei);exit(); 
+            var_dump($tomorrow);exit(); 
             $nikkei_tmp = Indexes::where([
                 ['stock_number', '=', 1],
                 ['date', '=', $tomorrow],
