@@ -25,6 +25,7 @@
         <td>{{ $nikkei_datas[$n]["pastprice"] }}=>{{ $nikkei_datas[$n]["openprice"] }}=>{{ $nikkei_datas[$n]["endprice"] }}</td>
         <td>{{ $mothers_datas[$n]["pastprice"] }}=>{{ $mothers_datas[$n]["openprice"] }}=>{{ $mothers_datas[$n]["endprice"] }}</td>
       </tr>
+    </table>
     <img src="https://stock-database.s3.ap-northeast-1.amazonaws.com/{{ $irekae_stock[$n]->irekae_after }}">
     <p class="subject">【結果とまとめ】</p>
     <p class="stock_result">{!! nl2br(e($irekae_stock[$n]->result)) !!}</p>
