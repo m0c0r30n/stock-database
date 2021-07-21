@@ -58,6 +58,7 @@ class MakeIrekaePdf implements ShouldQueue
                 ['stock_number', '=', 12],
                 ['date', '=', $tomorrow],
             ])->first();
+            var_dump($nikkei_tmp);
             array_push($nikkei, $nikkei_tmp);
             array_push($mothers, $mothers_tmp);
         }

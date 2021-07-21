@@ -7,6 +7,9 @@
   </head>
 <body>
   <h1>作成したPDFをダウンロード</h1>
-  <a href="https://stock-database.s3-ap-northeast-1.amazonaws.com/pdf/{{  $created_at }}_top_note.pdf">PDFのリンクへアクセス</a>
+  @if (isset($date))
+  <p>成功！！</p>
+  @else
+  <a href="https://stock-database.s3-ap-northeast-1.amazonaws.com/pdf/{{  $created_at }}_top_note.pdf">PDFのリンクへアクセス</a><a href="https://stock-database.s3-ap-northeast-1.amazonaws.com/pdf/{{  $created_at }}_top_note.pdf">PDFのリンクへアクセス</a>
 </body>
 </html>
