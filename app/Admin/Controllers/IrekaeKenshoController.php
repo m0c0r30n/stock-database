@@ -142,7 +142,6 @@ class IrekaeKenshoController extends Controller
         $form = new Form(new Irekaekensho);
 
         $form->tab('入れ替え検証',function($form) {
-            $form->hidden('id');
             $form->date('hiduke', '日付');
          
         })->tab('個別銘柄情報',function($form) {
