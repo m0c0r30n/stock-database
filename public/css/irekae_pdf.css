@@ -48,29 +48,34 @@ li {
 
 .nikkei_content {
     display: table-cell !important;
+    margin-bottom: 30px;
 }
 
 .mothers_content {
     display: table-cell !important;
+    margin-bottom: 30px;
 }
 
-/* .nikkei_info {
-    float: left;
-} */
+.nikkei_info, .mothers_info {
+    margin-bottom: 20px;
+}
 
 .indexes h2 {
-    font-size: 28px;
+    font-size: 48px;
     font-weight: bold;
+    margin-bottom: 10px;
+    text-align: left;
 }
 
 .indexes p {
-    font-size: 24px;
+    font-size: 36px;
     margin: 0;
     padding: 0;
+    text-align: left;
 }
 
 .indexes img {
-    width: 300px;
+    width: 48%;
 }
 
 /* .mothers_info {
