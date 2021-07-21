@@ -81,6 +81,10 @@ li {
     text-align: left;
 }
 
+.margin-left { 
+    margin-left: 10px;
+}
+
 .indexes .price {
     font-size: 24px;
     font-weight: bold;
