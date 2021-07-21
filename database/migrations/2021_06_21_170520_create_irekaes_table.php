@@ -16,6 +16,7 @@ class CreateIrekaesTable extends Migration
         Schema::create('irekaekenshos', function (Blueprint $table) {
             $table->id();
             $table->date('hizuke');
+            $table->timestamps();
         });
     }
 
