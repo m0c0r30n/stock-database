@@ -8,10 +8,10 @@ use App\Irekaestock;
 
 class Irekaekensho extends Model
 {
-    protected $dates = ['hiduke'];
+    protected $dates = ['hizuke'];
 
     public $timestamps = false;
-    
+
     public function irekaestocks() {
         return $this->hasMany(Irekaestock::class,'irekaekensho_id')->orderBy('id','asc');
     }
