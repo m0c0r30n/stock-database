@@ -40,6 +40,38 @@ li {
     text-align: left;
     margin: 20px 0;
 }
+.indexes {
+    margin-bottom: 20px;
+}
+
+.nikkei_content {
+    float: left;
+}
+
+.nikkei_info {
+    float: left;
+}
+
+.indexes h2 {
+    font-size: 28px;
+}
+
+.indexes p {
+    font-size: 24px;
+}
+
+.indexes img {
+    width: 200px;
+    float: right;
+}
+
+.mothers_info {
+    float: left;
+}
+
+.mothers_content {
+    float: right;
+}
 
 .subject {
     margin-top : 40px;
