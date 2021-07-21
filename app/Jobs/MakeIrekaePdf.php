@@ -42,6 +42,7 @@ class MakeIrekaePdf implements ShouldQueue
     {
         $location = storage_path() . '/pdf/';
         $week_day = date('w', strtotime($this->irekae_kensho->hizuke));
+        
         $week = array( "日", "月", "火", "水", "木", "金", "月" );
         $stock_name = [];
         $nikkei = [];
@@ -50,7 +51,13 @@ class MakeIrekaePdf implements ShouldQueue
         $irekae_date = explode('T', $this->irekae_kensho->toArray()["hizuke"])[0];
 
         $today = date('Y-m-d',strtotime($irekae_date));
-        $tomorrow = date('Y-m-d',strtotime($irekae_date . "+1 day"));
+        
+        if (intval($week_day) == 5) {
+            $tomorrow = date('Y-m-d',strtotime($irekae_date . "+3 day"));
+
+        } else {
+            $tomorrow = date('Y-m-d',strtotime($irekae_date . "+1 day"));
+        }
 
         $nikkei_today = Indexes::where([
             ['stock_number', '=', 1],
