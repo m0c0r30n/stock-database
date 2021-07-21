@@ -22,9 +22,9 @@
           <img src="https://seacret-holder.s3.ap-northeast-1.amazonaws.com/nikkei/nikkei_{{ $irekae_kensho->hizuke->format('Y_m_d') }}.png">
         </div>
         <div class="nikkei_info">
-          <p>前日値 : <span class="price">{{ $nikkei_pastprice }}円</span></p>
-          <p>始値 : <span class="price">{{ $nikkei_datas["openprice"] }}円</span></p>
-          <p>終値 : <span class="price">{{ $nikkei_datas["endprice"] }}円</span></p>
+          <div><p>前日値</p><span class="price">{{ $nikkei_pastprice }}円</span></div>
+          <div><p>始値</p><span class="price">{{ $nikkei_datas["openprice"] }}円</span></div>
+          <div><p>終値</p><span class="price">{{ $nikkei_datas["endprice"] }}円</span></div>
         </div>
       </div>
       <div class="mothers_content">
@@ -33,9 +33,9 @@
           <img src="https://seacret-holder.s3.ap-northeast-1.amazonaws.com/mothers/mothers_{{ $irekae_kensho->hizuke->format('Y_m_d') }}.png">
         </div>
         <div class="mothers_info">
-          <p>前日値 : <span class="price">{{ $mothers_pastprice }}円</span></p>
-          <p>始値 : <span class="price">{{ $mothers_datas["openprice"] }}円</span></p>
-          <p>終値 : <span class="price">{{ $mothers_datas["endprice"] }}円</span></p>
+          <div><p>前日値</p><span class="price">{{ $mothers_pastprice }}円</span></div>
+          <div><p>始値</p><span class="price">{{ $mothers_datas["openprice"] }}円</span></div>
+          <div><p>終値</p><span class="price">{{ $mothers_datas["endprice"] }}円</span></div>
         </div>
       </div>
     </div>

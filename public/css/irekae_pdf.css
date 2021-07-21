@@ -62,10 +62,6 @@ li {
     display: table !important;
 }
 
-.nikkei_number, .mothers_number {
-    display: table !important;
-}
-
 .indexes h2 {
     font-size: 42px;
     font-weight: bold;
@@ -74,13 +70,16 @@ li {
     text-align: left;
 }
 
+.nikkei_info div, .mothers_info div {
+    display: table-cell !important;
+}
+
 .indexes p {
     font-size: 18px;
     margin: 0;
     padding: 0;
     text-align: left;
     margin-left: 20px;
-    display: table-cell !important;
 }
 
 .indexes span {
