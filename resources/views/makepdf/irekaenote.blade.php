@@ -15,7 +15,6 @@
     <p class="stock_info">{!! nl2br(e($irekae_stock[$n]->info)) !!}</p>
   </div>
   <div class="page">
-    <p class="subject">【当日の地合い状況】</p>
     <div class="indexes">
       <div class="nikkei_content">
         <div class="nikkei_info">
