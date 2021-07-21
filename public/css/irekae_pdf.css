@@ -50,29 +50,41 @@ li {
     display: table-cell !important;
 }
 
+.nikkei_img {
+    display: table-cell !important;
+}
+
+.mothers_info {
+    display: table-cell !important;
+}
+
+.mothers_img {
+    display: table-cell !important;
+}
+
 /* .nikkei_info {
     float: left;
 } */
 
 .indexes h2 {
     font-size: 28px;
+    font-weight: bold;
 }
 
 .indexes p {
     font-size: 24px;
+    margin: 0;
+    padding: 0;
 }
 
 .indexes img {
-    width: 200px;
+    width: 300px;
 }
 
 /* .mothers_info {
     float: left;
 } */
 
-.mothers_content {
-    display: table-cell !important;
-}
 
 .subject {
     margin-top : 40px;
