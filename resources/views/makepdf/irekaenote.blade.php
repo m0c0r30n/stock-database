@@ -9,7 +9,7 @@
   <?php $stock_count = count($irekae_stock); ?>
   @for ($n = 0; $n < $stock_count; $n++)
   <div class="page">
-    <h1 id="irekae_stock_title">{{ $irekae_kensho->date->format('m月d日') }} ({{ $youbi }}) {{ $stock_name[$n] }} ({{ $irekae_stock[$n]->stock_number }})</h1>
+    <h1 id="irekae_stock_title">{{ $irekae_kensho->hizuke->format('m月d日') }} ({{ $youbi }}) {{ $stock_name[$n] }} ({{ $irekae_stock[$n]->stock_number }})</h1>
     <img src="https://stock-database.s3.ap-northeast-1.amazonaws.com/{{ $irekae_stock[$n]->irekae_before }}">
     <p class="subject">【会社情報】</p>
     <p class="stock_info">{!! nl2br(e($irekae_stock[$n]->info)) !!}</p>

@@ -41,7 +41,7 @@ class MakeIrekaePdf implements ShouldQueue
     public function handle()
     {
         $location = storage_path() . '/pdf/';
-        $week_day = date('w', strtotime($this->irekae_kensho->date));
+        $week_day = date('w', strtotime($this->irekae_kensho->hizuke));
         $week = array( "日", "月", "火", "水", "木", "金", "月" );
         $stock_name = [];
         $nikkei = [];
@@ -67,7 +67,7 @@ class MakeIrekaePdf implements ShouldQueue
             array_push($stock_name, $tmp->name);
         }
         
-        $filename = $this->irekae_kensho->date->format('Y_m_d').'_irekae_note.pdf';
+        $filename = $this->irekae_kensho->hizuke->format('Y_m_d').'_irekae_note.pdf';
         $pdf = \PDF::loadView('makepdf.irekaenote',['id' => $this->id, 'stock_name' => $stock_name, 'irekae_kensho' => $this->irekae_kensho, 'irekae_stock' => $this->irekae_stock, 'nikkei_datas' => $nikkei, 'mothers_datas' => $mothers, 'youbi' => $week[$week_day]])
             ->setOption('encoding', 'utf-8')
             ->setOption('user-style-sheet', base_path() . '/public/css/irekae_pdf.css');
