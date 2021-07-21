@@ -72,7 +72,7 @@ class MakeIrekaePdf implements ShouldQueue
 
         $nikkei_pastprice = $nikkei_today->toArray()["endprice"];
         $mothers_pastprice = $mothers_today->toArray()["endprice"];
-
+        
         $nikkei = $nikkei->toArray();
         $mothers = $mothers->toArray();
 
@@ -84,7 +84,7 @@ class MakeIrekaePdf implements ShouldQueue
 
         $filename = "${date_array['year']}_${date_array['month']}_${date_array['day']}_irekae_note.pdf";
         
-        $pdf = \PDF::loadView('makepdf.irekaenote',['id' => $this->id, 'stock_name' => $stock_name, 'irekae_kensho' => $this->irekae_kensho, 'irekae_stock' => $this->irekae_stock, 'nikkei_datas' => $nikkei, 'mothers_datas' => $mothers, 'nikkei_pastprice' => $nikkei_pastprice, 'mothers_today' => $mothers_today, 'youbi' => $week[$week_day]])
+        $pdf = \PDF::loadView('makepdf.irekaenote',['id' => $this->id, 'stock_name' => $stock_name, 'irekae_kensho' => $this->irekae_kensho, 'irekae_stock' => $this->irekae_stock, 'nikkei_datas' => $nikkei, 'mothers_datas' => $mothers, 'nikkei_pastprice' => $nikkei_pastprice, 'mothers_pastprice' => $mothers_pastprice, 'youbi' => $week[$week_day]])
             ->setOption('encoding', 'utf-8')
             ->setOption('user-style-sheet', base_path() . '/public/css/irekae_pdf.css');
 
