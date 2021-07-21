@@ -42,15 +42,17 @@ li {
 }
 .indexes {
     margin-bottom: 20px;
+    display: table !important;
+    width: 100% !important;
 }
 
 .nikkei_content {
-    float: left;
+    display: table-cell !important;
 }
 
-.nikkei_info {
+/* .nikkei_info {
     float: left;
-}
+} */
 
 .indexes h2 {
     font-size: 28px;
@@ -62,15 +64,14 @@ li {
 
 .indexes img {
     width: 200px;
-    float: right;
 }
 
-.mothers_info {
+/* .mothers_info {
     float: left;
-}
+} */
 
 .mothers_content {
-    float: right;
+    display: table-cell !important;
 }
 
 .subject {

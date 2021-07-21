@@ -40,16 +40,6 @@
         </div>
       </div>
     </div>
-    <table>
-      <tr>
-        <th>日経平均株価(前日値=>始値=>終値)</th>
-        <th>マザーズ指数(前日値=>始値=>終値)</th>
-      </tr>
-      <tr>
-        <td>{{ $nikkei_pastprice }}=>{{ $nikkei_datas["openprice"] }}=>{{ $nikkei_datas["endprice"] }}</td>
-        <td>{{ $mothers_pastprice }}=>{{ $mothers_datas["openprice"] }}=>{{ $mothers_datas["endprice"] }}</td>
-      </tr>
-    </table>
     <img src="https://stock-database.s3.ap-northeast-1.amazonaws.com/{{ $irekae_stock[$n]->irekae_after }}">
     <p class="subject">【結果とまとめ】</p>
     <p class="stock_result">{!! nl2br(e($irekae_stock[$n]->result)) !!}</p>
