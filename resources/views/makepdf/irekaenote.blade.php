@@ -23,8 +23,8 @@
         </div>
         <div class="nikkei_info">
           <div><p>前日値</p><span class="price">{{ $nikkei_pastprice }}円</span></div>
-          <div><p>始値</p><span class="price">{{ $nikkei_datas["openprice"] }}円</span></div>
-          <div><p>終値</p><span class="price">{{ $nikkei_datas["endprice"] }}円</span></div>
+          <div style="margin-left:10px;"><p>始値</p><span class="price">{{ $nikkei_datas["openprice"] }}円</span></div>
+          <div style="margin-left:10px;"><p>終値</p><span class="price">{{ $nikkei_datas["endprice"] }}円</span></div>
         </div>
       </div>
       <div class="mothers_content">
@@ -34,8 +34,8 @@
         </div>
         <div class="mothers_info">
           <div><p>前日値</p><p class="price">{{ $mothers_pastprice }}円</p></div>
-          <div><p>始値</p><p class="price">{{ $mothers_datas["openprice"] }}円</p></div>
-          <div><p>終値</p><p class="price">{{ $mothers_datas["endprice"] }}円</p></div>
+          <div style="margin-left:10px;"><p>始値</p><p class="price">{{ $mothers_datas["openprice"] }}円</p></div>
+          <div style="margin-left:10px;"><p>終値</p><p class="price">{{ $mothers_datas["endprice"] }}円</p></div>
         </div>
       </div>
     </div>
