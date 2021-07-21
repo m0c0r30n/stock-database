@@ -17,23 +17,27 @@
   <div class="page">
     <p class="subject">【当日の地合い状況】</p>
     <div class="indexes">
-      <div class="nikkei_info">
-        <h2>日経平均</h2>
-        <p>前日値 : {{ $nikkei_pastprice }}円</p>
-        <p>始値 : {{ $nikkei_datas["openprice"] }}円</p>
-        <p>終値 : {{ $nikkei_datas["endprice"] }}円</p>
+      <div class="nikkei_content">
+        <div class="nikkei_info">
+          <h2>日経平均</h2>
+          <p>前日値 : {{ $nikkei_pastprice }}円</p>
+          <p>始値 : {{ $nikkei_datas["openprice"] }}円</p>
+          <p>終値 : {{ $nikkei_datas["endprice"] }}円</p>
+        </div>
+        <div class="nikkei_img">
+          <img src="https://seacret-holder.s3.ap-northeast-1.amazonaws.com/nikkei/nikkei_{{ $irekae_kensho->hizuke->format('Y_m_d') }}.png">
+        </div>
       </div>
-      <div class="nikkei_img">
-        <img src="https://seacret-holder.s3.ap-northeast-1.amazonaws.com/nikkei/nikkei_{{ $irekae_kensho->hizuke->format('Y_m_d') }}.png">
-      </div>
-      <div class="mothers_info">
-        <h2>日経平均</h2>
-        <p>前日値 : {{ $mothers_pastprice }}円</p>
-        <p>始値 : {{ $mothers_datas["openprice"] }}円</p>
-        <p>終値 : {{ $mothers_datas["endprice"] }}円</p>
-      </div>
-      <div class="mothers_img">
-        <img src="https://seacret-holder.s3.ap-northeast-1.amazonaws.com/mothers/mothers_{{ $irekae_kensho->hizuke->format('Y_m_d') }}.png">
+      <div class="mothers_content">
+        <div class="mothers_info">
+          <h2>日経平均</h2>
+          <p>前日値 : {{ $mothers_pastprice }}円</p>
+          <p>始値 : {{ $mothers_datas["openprice"] }}円</p>
+          <p>終値 : {{ $mothers_datas["endprice"] }}円</p>
+        </div>
+        <div class="mothers_img">
+          <img src="https://seacret-holder.s3.ap-northeast-1.amazonaws.com/mothers/mothers_{{ $irekae_kensho->hizuke->format('Y_m_d') }}.png">
+        </div>
       </div>
     </div>
     <img src="https://stock-database.s3.ap-northeast-1.amazonaws.com/{{ $irekae_stock[$n]->irekae_after }}">
