@@ -69,7 +69,6 @@ class MakeIrekaePdf implements ShouldQueue
         $date_array = $this->irekae_kensho->hizuke->toArray();
 
         $filename = "${date_array['year']}_${date_array['month']}_${date_array['day']}_irekae_note.pdf";
-        var_dump($filename);exit();
         
         $pdf = \PDF::loadView('makepdf.irekaenote',['id' => $this->id, 'stock_name' => $stock_name, 'irekae_kensho' => $this->irekae_kensho, 'irekae_stock' => $this->irekae_stock, 'nikkei_datas' => $nikkei, 'mothers_datas' => $mothers, 'youbi' => $week[$week_day]])
             ->setOption('encoding', 'utf-8')
