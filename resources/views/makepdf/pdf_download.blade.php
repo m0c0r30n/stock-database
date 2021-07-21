@@ -11,5 +11,6 @@
   <p>成功！！</p>
   @else
   <a href="https://stock-database.s3-ap-northeast-1.amazonaws.com/pdf/{{  $created_at }}_top_note.pdf">PDFのリンクへアクセス</a><a href="https://stock-database.s3-ap-northeast-1.amazonaws.com/pdf/{{  $created_at }}_top_note.pdf">PDFのリンクへアクセス</a>
+  @endif
 </body>
 </html>
